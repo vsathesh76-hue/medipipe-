@@ -1,0 +1,158 @@
+
+git remote add origin https://github.com/vsathesh76-hue/medipipe-.git!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UnderstandMe - Accessible Billing</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>UnderstandMe</h1>
+    <p>Accessible Billing & Voice Assistance</p>
+    <span class="badge">DEMO MODE</span>
+</header>
+
+<main class="container">
+
+    <!-- BILL READER -->
+    <section class="card">
+        <h2>🧾 Accessible Bill Reader</h2>
+
+        <p class="muted">
+            Sample invoice using fictional data.
+        </p>
+
+        <label for="invoiceSelect">Choose an invoice</label>
+
+        <select id="invoiceSelect">
+            <option value="1001">Invoice UM-1001</option>
+            <option value="1002">Invoice UM-1002</option>
+        </select>
+
+        <div id="billDetails" aria-live="polite"></div>
+
+        <div class="button-group">
+            <button id="readButton" class="primary">
+                🔊 Read Bill Aloud
+            </button>
+
+            <button id="repeatButton">
+                🔁 Repeat Bill
+            </button>
+
+            <button id="stopButton">
+                ⏹ Stop Reading
+            </button>
+        </div>
+
+        <p id="speechStatus" role="status" aria-live="polite">
+            Ready to read your bill.
+        </p>
+    </section>
+
+    <!-- MEDICINE REMINDER -->
+    <section class="card">
+        <h2>💊 Medicine Reminder</h2>
+
+        <p class="muted">
+            Prototype only. Follow your prescribed medication schedule.
+        </p>
+
+        <label for="medicineName">Medicine name</label>
+        <input
+            type="text"
+            id="medicineName"
+            value="Sample medicine"
+            maxlength="80"
+            placeholder="Enter medicine name"
+        >
+
+        <label for="reminderTime">Reminder time</label>
+        <input type="time" id="reminderTime">
+
+        <div class="button-group">
+            <button id="setReminderButton" class="primary">
+                Set Reminder
+            </button>
+
+            <button id="cancelReminderButton">
+                Cancel Reminder
+            </button>
+        </div>
+
+        <p id="reminderStatus" role="status" aria-live="polite">
+            No reminder scheduled.
+        </p>
+    </section>
+
+    <!-- TESTING CHECKLIST -->
+    <section class="card">
+        <h2>✅ Testing Checklist</h2>
+
+        <p class="muted">
+            Run each test and record the actual result.
+        </p>
+
+        <div id="testChecklist"></div>
+
+        <h3 id="testSummary">0 tests recorded</h3>
+
+        <button id="generateReportButton" class="primary">
+            Generate Test Report
+        </button>
+
+        <button id="resetTestsButton">
+            Reset Tests
+        </button>
+
+        <label for="testReport">Test Report</label>
+
+        <textarea
+            id="testReport"
+            rows="12"
+            placeholder="Your generated test report will appear here."
+        ></textarea>
+
+        <button id="downloadReportButton">
+            Download Test Report
+        </button>
+    </section>
+
+    <!-- TWO DEVICE DEMO -->
+    <section class="card">
+        <h2>📱 Two-Device Demonstration</h2>
+
+        <ol>
+            <li>Run the application on your laptop.</li>
+            <li>Open the app using a reachable network address.</li>
+            <li>Generate a QR code pointing to that address.</li>
+            <li>Scan the QR code using your mobile phone.</li>
+            <li>Open the billing page.</li>
+            <li>Test voice reading and stop controls.</li>
+            <li>Record the actual results in the test report.</li>
+        </ol>
+
+        <p class="muted">
+            QR generation and network setup must be configured separately.
+            Do not mark the two-device test as passed until it works on
+            your actual laptop and phone.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>UnderstandMe | Accessible Technology Prototype</p>
+    <p>Fictional invoice data — demonstration only.</p>
+</footer>
+
+</body>
+</html>
+
